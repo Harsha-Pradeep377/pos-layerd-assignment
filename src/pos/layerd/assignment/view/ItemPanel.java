@@ -49,7 +49,7 @@ public class ItemPanel extends javax.swing.JPanel {
 
         basePanel.setPreferredSize(new java.awt.Dimension(745, 486));
 
-        headerlabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        headerlabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         headerlabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         headerlabel.setText("Manage Item");
 

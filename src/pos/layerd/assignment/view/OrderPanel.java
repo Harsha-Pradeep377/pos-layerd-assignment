@@ -51,7 +51,7 @@ public class OrderPanel extends javax.swing.JPanel {
         itemTable = new javax.swing.JTable();
         placeorderButton = new javax.swing.JButton();
 
-        headerlabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        headerlabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         headerlabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         headerlabel.setText("Manage Order");
 
