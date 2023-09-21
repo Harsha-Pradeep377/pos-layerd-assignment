@@ -4,6 +4,8 @@
  */
 package pos.layerd.assignment;
 
+import pos.layerd.assignment.view.LayoutView;
+
 /**
  *
  * @author Harsha
@@ -14,7 +16,7 @@ public class PosLayerdAssignment {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        new LayoutView().setVisible(true);
     }
     
 }
