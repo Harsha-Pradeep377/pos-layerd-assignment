@@ -5,6 +5,7 @@
 package pos.layerd.assignment.service;
 
 import pos.layerd.assignment.service.custom.impl.CustomerServiceImpl;
+import pos.layerd.assignment.service.custom.impl.ItemServiceImpl;
 
 /**
  *
@@ -25,12 +26,13 @@ public class ServiceFactory {
         switch (type) {
             case CUSTOMER:
                 return new CustomerServiceImpl();
-            
+             case ITEM:
+                return new ItemServiceImpl();
             default:
                 return null;
         }
     }
     public enum ServiceType{
-        CUSTOMER, ITEM, ORDER
+        CUSTOMER, ITEM
     }
 }

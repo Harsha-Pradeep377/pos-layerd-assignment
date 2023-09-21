@@ -95,6 +95,11 @@ public class ItemDto {
     public void setQoh(Integer qoh) {
         this.qoh = qoh;
     }
+
+    @Override
+    public String toString() {
+        return "ItemDto{" + "id=" + id + ", description=" + description + ", packSize=" + packSize + ", unitPrice=" + unitPrice + ", qoh=" + qoh + '}';
+    }
     
     
 

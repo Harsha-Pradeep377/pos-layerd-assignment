@@ -5,6 +5,7 @@
 package pos.layerd.assignment.dao;
 
 import pos.layerd.assignment.dao.custom.impl.CustomerDaoImpl;
+import pos.layerd.assignment.dao.custom.impl.ItemDaoImpl;
 
 /**
  *
@@ -25,13 +26,14 @@ public class DaoFactory {
         switch (type) {
             case CUSTOMER:
                 return new CustomerDaoImpl();
-             
+            case ITEM:
+                return new ItemDaoImpl(); 
             default:
                 return null;
         }
     }
     public enum DaoType{
-        CUSTOMER
+        CUSTOMER, ITEM
     }
     
 }
