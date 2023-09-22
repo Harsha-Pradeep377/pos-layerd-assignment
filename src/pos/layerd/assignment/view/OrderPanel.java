@@ -4,16 +4,31 @@
  */
 package pos.layerd.assignment.view;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import pos.layerd.assignment.controller.CustomerController;
+import pos.layerd.assignment.controller.ItemController;
+import pos.layerd.assignment.controller.OrderController;
+import pos.layerd.assignment.dto.CustomerDto;
+import pos.layerd.assignment.dto.ItemDto;
+
 /**
  *
  * @author Harsha
  */
 public class OrderPanel extends javax.swing.JPanel {
+    private CustomerController customerController;
+    private ItemController itemController;
+    private OrderController orderController;
 
     /**
      * Creates new form OrderPanel
      */
     public OrderPanel() {
+        customerController = new CustomerController();
+        itemController = new ItemController();
+        orderController = new OrderController();
         initComponents();
     }
 
@@ -249,7 +264,7 @@ public class OrderPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchcustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchcustomerButtonActionPerformed
-        
+        searchCustomer();
     }//GEN-LAST:event_searchcustomerButtonActionPerformed
 
     private void additemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additemButtonActionPerformed
@@ -257,7 +272,7 @@ public class OrderPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_additemButtonActionPerformed
 
     private void searchitemButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchitemButton1ActionPerformed
-        
+        searchItem();
     }//GEN-LAST:event_searchitemButton1ActionPerformed
 
     private void placeorderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeorderButtonActionPerformed
@@ -291,4 +306,34 @@ public class OrderPanel extends javax.swing.JPanel {
     private javax.swing.JButton searchcustomerButton;
     private javax.swing.JButton searchitemButton1;
     // End of variables declaration//GEN-END:variables
+
+    private void searchCustomer() {
+        try {
+            String custId = customerText.getText();
+            CustomerDto cust = customerController.getCustomer(custId);
+            if (cust != null) {
+                custdataLabel.setText(cust.getName() + ", " + cust.getAddress());
+            } else {
+                JOptionPane.showMessageDialog(this, "Customer Not Found");
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(OrderPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
+
+    private void searchItem() {
+        try {
+            String itemId = itemidText.getText();
+            ItemDto item = itemController.getItem(itemId);
+            if (item != null) {
+                itemdataLabel.setText(item.getDescription() + ", " + item.getUnitPrice() + ", " + item.getQoh());
+            } else {
+                JOptionPane.showMessageDialog(this, "Item Not Found");
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(OrderPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
 }
