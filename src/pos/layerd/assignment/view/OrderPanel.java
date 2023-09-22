@@ -17,6 +17,7 @@ import pos.layerd.assignment.controller.OrderController;
 import pos.layerd.assignment.dto.CustomerDto;
 import pos.layerd.assignment.dto.ItemDto;
 import pos.layerd.assignment.dto.OrderDetailDto;
+import pos.layerd.assignment.dto.OrderDto;
 
 /**
  *
@@ -303,7 +304,7 @@ public class OrderPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_searchitemButton1ActionPerformed
 
     private void placeorderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeorderButtonActionPerformed
-        
+        placeOrder();
     }//GEN-LAST:event_placeorderButtonActionPerformed
 
     private void totalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalButtonActionPerformed
@@ -414,6 +415,25 @@ public class OrderPanel extends javax.swing.JPanel {
                 Logger.getLogger(OrderPanel.class.getName()).log(Level.SEVERE, null, ex);
             }
          }
+    }
+
+    private void placeOrder() {
+        try {
+            OrderDto orderDto = new OrderDto(orderidText.getText(), customerText.getText(), orderDetailDtos);
+            String result = orderController.placeOrder(orderDto);
+            JOptionPane.showMessageDialog(this, result);
+        } catch (Exception ex) {
+            Logger.getLogger(OrderPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+        clearForm();
+    }
+    private void clearForm() {
+        loadTable();
+        orderidText.setText("");
+        customerText.setText("");
+        custdataLabel.setText("");
+        totalPriceText.setText("");
     }
     
  }
