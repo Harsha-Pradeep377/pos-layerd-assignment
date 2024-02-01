@@ -26,123 +26,83 @@ public class LayoutView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        sideNavPanel = new javax.swing.JPanel();
-        manageCustomerButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         manageItemButton = new javax.swing.JButton();
+        manageCustomerButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         manageOrderButton = new javax.swing.JButton();
         bodyPanel = new javax.swing.JPanel();
-        headerPanel = new javax.swing.JPanel();
-        headerLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(932, 550));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        sideNavPanel.setBackground(new java.awt.Color(204, 204, 255));
-        sideNavPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pos/layerd/assignment/view/icons8-supermarket-64.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 80, 80));
 
-        manageCustomerButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        manageCustomerButton.setText("Manage Customer");
-        manageCustomerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageCustomerButtonActionPerformed(evt);
-            }
-        });
-
-        manageItemButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        manageItemButton.setBackground(new java.awt.Color(255, 255, 51));
+        manageItemButton.setFont(new java.awt.Font("Harrington", 1, 14)); // NOI18N
+        manageItemButton.setForeground(new java.awt.Color(0, 0, 204));
         manageItemButton.setText("Manage Item");
+        manageItemButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         manageItemButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageItemButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(manageItemButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 160, 60));
 
-        manageOrderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        manageCustomerButton.setBackground(new java.awt.Color(255, 255, 51));
+        manageCustomerButton.setFont(new java.awt.Font("Harrington", 1, 14)); // NOI18N
+        manageCustomerButton.setForeground(new java.awt.Color(0, 0, 204));
+        manageCustomerButton.setText("Manage Customer");
+        manageCustomerButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        manageCustomerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageCustomerButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(manageCustomerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 160, 60));
+
+        jLabel1.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Family Super");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, 80));
+
+        manageOrderButton.setBackground(new java.awt.Color(255, 255, 51));
+        manageOrderButton.setFont(new java.awt.Font("Harrington", 1, 14)); // NOI18N
+        manageOrderButton.setForeground(new java.awt.Color(0, 0, 204));
         manageOrderButton.setText("Manage Order");
+        manageOrderButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         manageOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageOrderButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout sideNavPanelLayout = new javax.swing.GroupLayout(sideNavPanel);
-        sideNavPanel.setLayout(sideNavPanelLayout);
-        sideNavPanelLayout.setHorizontalGroup(
-            sideNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideNavPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(sideNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(manageOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manageCustomerButton, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                    .addComponent(manageItemButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        sideNavPanelLayout.setVerticalGroup(
-            sideNavPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideNavPanelLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(manageCustomerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(manageItemButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(manageOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(253, Short.MAX_VALUE))
-        );
+        getContentPane().add(manageOrderButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 160, 60));
 
         javax.swing.GroupLayout bodyPanelLayout = new javax.swing.GroupLayout(bodyPanel);
         bodyPanel.setLayout(bodyPanelLayout);
         bodyPanelLayout.setHorizontalGroup(
             bodyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 741, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
         );
         bodyPanelLayout.setVerticalGroup(
             bodyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 540, Short.MAX_VALUE)
         );
 
-        headerPanel.setBackground(new java.awt.Color(102, 102, 255));
+        getContentPane().add(bodyPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 0, 750, 540));
 
-        headerLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        headerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        headerLabel.setText("Super Market");
-        headerLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel2.setBackground(new java.awt.Color(20, 123, 245));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pos/layerd/assignment/view/etttt.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -4, 190, 560));
 
-        javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
-        headerPanel.setLayout(headerPanelLayout);
-        headerPanelLayout.setHorizontalGroup(
-            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(headerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        headerPanelLayout.setVerticalGroup(
-            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(headerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(sideNavPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bodyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addComponent(headerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(sideNavPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bodyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        pack();
+        setSize(new java.awt.Dimension(948, 558));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageCustomerButtonActionPerformed
@@ -194,12 +154,12 @@ public class LayoutView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bodyPanel;
-    private javax.swing.JLabel headerLabel;
-    private javax.swing.JPanel headerPanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton manageCustomerButton;
     private javax.swing.JButton manageItemButton;
     private javax.swing.JButton manageOrderButton;
-    private javax.swing.JPanel sideNavPanel;
     // End of variables declaration//GEN-END:variables
 
     private void loadCustomerPanel() {

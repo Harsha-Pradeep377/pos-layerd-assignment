@@ -76,8 +76,12 @@ public class OrderPanel extends javax.swing.JPanel {
         totalButton = new javax.swing.JButton();
         totalPriceText = new javax.swing.JTextField();
 
-        headerlabel.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        headerlabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        basePanel.setBackground(new java.awt.Color(51, 51, 51));
+
+        headerPanel.setBackground(new java.awt.Color(51, 204, 255));
+
+        headerlabel.setFont(new java.awt.Font("Harrington", 1, 24)); // NOI18N
+        headerlabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         headerlabel.setText("Manage Order");
 
         javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
@@ -91,34 +95,73 @@ public class OrderPanel extends javax.swing.JPanel {
             .addComponent(headerlabel, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
+        formPanel.setBackground(new java.awt.Color(51, 51, 51));
+
+        orderidLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        orderidLabel.setForeground(new java.awt.Color(255, 255, 255));
         orderidLabel.setText("Order Id");
 
+        orderidText.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        orderidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
+
+        customerLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        customerLabel.setForeground(new java.awt.Color(255, 255, 255));
         customerLabel.setText("Customer");
 
-        searchcustomerButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        customerText.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        customerText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
+
+        custdataLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        custdataLabel.setForeground(new java.awt.Color(255, 255, 255));
+
+        searchcustomerButton.setBackground(new java.awt.Color(102, 204, 255));
+        searchcustomerButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         searchcustomerButton.setText("Search");
+        searchcustomerButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         searchcustomerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchcustomerButtonActionPerformed(evt);
             }
         });
 
+        itemidLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        itemidLabel.setForeground(new java.awt.Color(255, 255, 255));
         itemidLabel.setText("Item Id");
 
+        itemidText.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        itemidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
+
+        qtyLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        qtyLabel.setForeground(new java.awt.Color(255, 255, 255));
         qtyLabel.setText("Qty");
 
-        additemButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        qtyText.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        qtyText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
+
+        additemButton.setBackground(new java.awt.Color(102, 204, 255));
+        additemButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         additemButton.setText("Add Item");
+        additemButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         additemButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 additemButtonActionPerformed(evt);
             }
         });
 
+        itemdataLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        itemdataLabel.setForeground(new java.awt.Color(255, 255, 255));
+
+        discountLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        discountLabel.setForeground(new java.awt.Color(255, 255, 255));
         discountLabel.setText("Discount");
 
-        searchitemButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        discountText.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        discountText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255), 2));
+
+        searchitemButton1.setBackground(new java.awt.Color(102, 204, 255));
+        searchitemButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         searchitemButton1.setText("Search");
+        searchitemButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         searchitemButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchitemButton1ActionPerformed(evt);
@@ -145,7 +188,7 @@ public class OrderPanel extends javax.swing.JPanel {
                         .addComponent(searchcustomerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(custdataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(16, Short.MAX_VALUE))
                     .addGroup(formPanelLayout.createSequentialGroup()
                         .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(qtyLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -158,11 +201,11 @@ public class OrderPanel extends javax.swing.JPanel {
                                     .addGroup(formPanelLayout.createSequentialGroup()
                                         .addComponent(discountText, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(additemButton))
+                                        .addComponent(additemButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(formPanelLayout.createSequentialGroup()
                                         .addComponent(itemidText, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(searchitemButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(searchitemButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(itemdataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(qtyText, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -203,6 +246,10 @@ public class OrderPanel extends javax.swing.JPanel {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        customerPanel.setBackground(new java.awt.Color(51, 51, 51));
+
+        itemTable.setBackground(new java.awt.Color(0, 153, 153));
+        itemTable.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         itemTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -216,16 +263,20 @@ public class OrderPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(itemTable);
 
-        placeorderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        placeorderButton.setBackground(new java.awt.Color(102, 204, 255));
+        placeorderButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         placeorderButton.setText("Place Order");
+        placeorderButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         placeorderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 placeorderButtonActionPerformed(evt);
             }
         });
 
-        totalButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        totalButton.setBackground(new java.awt.Color(102, 204, 255));
+        totalButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         totalButton.setText("Total Price");
+        totalButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         totalButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalButtonActionPerformed(evt);
@@ -238,26 +289,29 @@ public class OrderPanel extends javax.swing.JPanel {
         customerPanel.setLayout(customerPanelLayout);
         customerPanelLayout.setHorizontalGroup(
             customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerPanelLayout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addComponent(totalButton)
+                .addGap(80, 80, 80)
+                .addComponent(totalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(totalPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(placeorderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(41, 41, 41))
+            .addGroup(customerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         customerPanelLayout.setVerticalGroup(
             customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(placeorderButton)
-                    .addComponent(totalButton)
-                    .addComponent(totalPriceText))
-                .addGap(0, 19, Short.MAX_VALUE))
+                    .addComponent(totalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(totalPriceText)
+                    .addComponent(placeorderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout basePanelLayout = new javax.swing.GroupLayout(basePanel);
@@ -275,8 +329,8 @@ public class OrderPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(formPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(customerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(customerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -287,7 +341,9 @@ public class OrderPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(basePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(basePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
